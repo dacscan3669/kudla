@@ -1,0 +1,421 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:clickable="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/grid_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:numColumns="auto_fit"
+            android:gravity="center"
+            android:stretchMode="columnWidth"
+            android:background="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:textColor="#21759b"
+            android:textStyle="bold"
+            android:layout_below="@+id/grid_view"/>
+
+        <TextView
+            android:id="@+id/price_prefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs "
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="18sp"
+            android:textColor="#21759b"
+            android:textStyle="bold"
+            android:layout_below="@+id/title"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/price_prefix"
+            android:textSize="18sp"
+            android:textColor="#21759b"
+            android:textStyle="bold"
+            android:layout_below="@+id/title"/>
+
+        <View
+            android:id="@+id/center_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/price"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/contact_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact:"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/center_divider1"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/contact_label"/>
+
+        <ImageView
+            android:id="@+id/phone_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="centerInside"
+            android:layout_below="@+id/name"
+            android:src="@mipmap/phone1"/>
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/phone_icon"
+            android:layout_below="@+id/name"
+            android:textSize="14sp"
+            android:textColor="#21759b"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/phone"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/email"/>
+
+
+        <View
+            android:id="@+id/center_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/address"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/center_divider2"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/description_label"/>
+
+        <View
+            android:id="@+id/center_divider3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/description"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/condition_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Condition"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/center_divider3"/>
+
+        <TextView
+            android:id="@+id/condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/center_divider3"/>
+
+        <View
+            android:id="@+id/center_divider4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/condition"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/year_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year of purchase"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/center_divider4"/>
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/center_divider4"/>
+
+        <View
+            android:id="@+id/year_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/year"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/kms_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kilometers run"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/year_divider"/>
+
+        <TextView
+            android:id="@+id/kms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toLeftOf="@+id/kms_suffix"
+            android:layout_below="@+id/year_divider"/>
+
+        <TextView
+            android:id="@+id/kms_suffix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kms"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/year_divider"/>
+
+        <View
+            android:id="@+id/kms_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/kms"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/mileage_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mileage"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/kms_divider"/>
+
+        <TextView
+            android:id="@+id/mileage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_toLeftOf="@+id/mileage_suffix"
+            android:layout_below="@+id/kms_divider"/>
+
+        <TextView
+            android:id="@+id/mileage_suffix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kms/ltr"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/kms_divider"/>
+
+        <View
+            android:id="@+id/mileage_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/mileage"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/fuel_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuel Type"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/mileage_divider"/>
+
+        <TextView
+            android:id="@+id/fuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/mileage_divider"/>
+
+        <View
+            android:id="@+id/fuel_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/fuel"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/colour_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Colour"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/fuel_divider"/>
+
+        <TextView
+            android:id="@+id/colour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/fuel_divider"/>
+
+        <View
+            android:id="@+id/colour_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/colour"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/aircon_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Air Conditioned"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:layout_below="@+id/colour_divider"/>
+
+        <TextView
+            android:id="@+id/aircon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/colour_divider"/>
+
+        <View
+            android:id="@+id/aircon_divider"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="50dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/colour"
+            android:background="@android:color/darker_gray" />
+
+    </RelativeLayout>
+</ScrollView>

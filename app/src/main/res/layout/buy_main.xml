@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/buy_content"
+    tools:context="info.androidhive.materialtabs.fragments.OneFragment">
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="8dp"
+        android:minWidth="250dp"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/category" />
+
+    <Spinner
+        android:id="@+id/spinnerSubCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerCategory"
+        android:layout_below="@+id/spinnerCategory"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:minWidth="250dp"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/cars_vehicles" />
+
+    <Button
+        android:text="Search"
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_round"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/spinnerSubCategory"/>
+
+</RelativeLayout>

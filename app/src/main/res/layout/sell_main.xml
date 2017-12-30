@@ -1,0 +1,496 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:numColumns="5"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="4dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <TextView
+        android:id="@+id/grid_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Photos"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/gridView1"/>
+
+    <android.support.design.widget.TextInputLayout
+          android:id="@+id/title_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="4dp"
+          app:hintTextAppearance="@style/TextLabel"
+          android:layout_below="@+id/grid_label" >
+          <EditText
+              android:id="@+id/title"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:singleLine="true"
+              android:maxLength="65"
+              android:hint="Title" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+          android:id="@+id/description_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="4dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="4dp"
+          app:hintTextAppearance="@style/TextLabel"
+          android:layout_below="@+id/title_layout" >
+          <EditText
+              android:id="@+id/description"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Description"
+              android:inputType="textMultiLine"
+              android:gravity="top|left"
+              android:maxLines="3" />
+      </android.support.design.widget.TextInputLayout>
+
+      <TextView
+          android:id="@+id/category_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Select Category"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="4dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginLeft="2dp"
+          android:layout_below="@+id/description_layout"/>
+
+      <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="2dp"
+        android:minWidth="250dp"
+        android:layout_below="@+id/category_label"
+        android:entries="@array/category" />
+
+    <Spinner
+        android:id="@+id/spinnerSubCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinnerCategory"
+        android:layout_below="@+id/spinnerCategory"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="4dp"
+        android:minWidth="250dp"
+        android:entries="@array/cars_vehicles" />
+
+    <View
+        android:id="@+id/spinner_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/spinnerSubCategory"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/condition_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Condition"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_below="@+id/spinner_divider"/>
+
+    <RadioGroup
+        android:id="@+id/condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/condition_label">
+
+        <RadioButton
+            android:id="@+id/radioUsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Used"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="New" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/condition_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/condition"
+        android:background="@android:color/darker_gray" />
+
+      <TextView
+          android:id="@+id/ac_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Air Conditioned"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="4dp"
+          android:layout_below="@+id/condition_divider"/>
+
+      <RadioGroup
+          android:id="@+id/airCon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:layout_marginBottom="8dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="8dp"
+          android:layout_below="@+id/ac_label" >
+
+          <RadioButton
+              android:id="@+id/Yes"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Yes"
+              android:checked="true" />
+
+          <RadioButton
+              android:id="@+id/No"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginLeft="4dp"
+              android:text="No" />
+      </RadioGroup>
+
+      <View
+          android:id="@+id/aircon_divider"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/airCon"
+          android:background="@android:color/darker_gray" />
+
+      <TextView
+          android:id="@+id/fuel_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Fuel Type"
+          android:layout_marginBottom="4dp"
+          android:layout_marginTop="4dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginLeft="2dp"
+          android:layout_below="@+id/aircon_divider"/>
+
+      <RadioGroup
+          android:id="@+id/fuel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:layout_marginBottom="8dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="8dp"
+          android:layout_below="@+id/fuel_label">
+          <RadioButton
+              android:id="@+id/radioPetrol"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Petrol"
+              android:checked="true" />
+          <RadioButton
+              android:id="@+id/radioDiesel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginLeft="4dp"
+              android:text="Diesel" />
+          <RadioButton
+              android:id="@+id/radioGas"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginLeft="4dp"
+              android:text="Gas" />
+          <RadioButton
+              android:id="@+id/radioDual"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="4dp"
+              android:layout_marginLeft="4dp"
+              android:text="Dual" />
+      </RadioGroup>
+
+      <View
+          android:id="@+id/fuel_divider"
+          android:layout_width="match_parent"
+          android:layout_height="1dp"
+          android:layout_below="@+id/fuel"
+          android:background="@android:color/darker_gray" />
+
+      <android.support.design.widget.TextInputLayout
+        android:id="@+id/price_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="8dp"
+        app:hintTextAppearance="@style/TextLabel"
+        android:layout_below="@+id/fuel_divider">
+
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="10"
+            android:hint="Price in Rs" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/year_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="4dp"
+        app:hintTextAppearance="@style/TextLabel"
+        android:layout_below="@+id/price_layout">
+        <EditText
+            android:id="@+id/year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="4"
+            android:hint="Year of purchase" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/kms_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="4dp"
+        app:hintTextAppearance="@style/TextLabel"
+        android:layout_below="@+id/year_layout" >
+        <EditText
+            android:id="@+id/kms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="6"
+            android:hint="Kilometers run" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/mileage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="4dp"
+        app:hintTextAppearance="@style/TextLabel"
+        android:layout_below="@+id/kms_layout" >
+        <EditText
+            android:id="@+id/mileage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="3"
+            android:hint="Kilometers per litre (optional)" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+            android:id="@+id/colour_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginTop="4dp"
+            app:hintTextAppearance="@style/TextLabel"
+            android:layout_below="@+id/mileage_layout" >
+            <EditText
+              android:id="@+id/colour"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="12"
+              android:hint="Colour (optional)" />
+    </android.support.design.widget.TextInputLayout>
+
+      <TextView
+          android:id="@+id/contact_star"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="*"
+          android:textColor="#FF0000"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="8dp"
+          android:layout_below="@+id/colour_layout"/>
+
+      <TextView
+          android:id="@+id/contact_label"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Contact Details"
+          android:layout_marginBottom="10dp"
+          android:layout_marginTop="8dp"
+          android:layout_below="@+id/colour_layout"
+          android:layout_toRightOf="@+id/contact_star"/>
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/name_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="30dp"
+          app:hintTextAppearance="@style/TextLabel"
+          android:layout_below="@+id/colour_layout" >
+          <EditText
+              android:id="@+id/name"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:singleLine="true"
+              android:maxLength="30"
+              android:hint="Contact Name" />
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/phone_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="4dp"
+          app:hintTextAppearance="@style/TextLabel"
+          android:layout_below="@+id/name_layout" >
+          <EditText
+              android:id="@+id/phone"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:inputType="phone"
+              android:singleLine="true"
+              android:maxLength="13"
+              android:hint="Contact number" />
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/email_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="4dp"
+          app:hintTextAppearance="@style/TextLabel"
+          android:layout_below="@+id/phone_layout" >
+          <EditText
+              android:id="@+id/email"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:singleLine="true"
+              android:maxLength="20"
+              android:hint="Email ID (Optional)" />
+      </android.support.design.widget.TextInputLayout>
+
+      <android.support.design.widget.TextInputLayout
+          android:id="@+id/address_layout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="10dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="4dp"
+          app:hintTextAppearance="@style/TextLabel"
+          android:layout_below="@+id/email_layout" >
+          <EditText
+              android:id="@+id/address"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:maxLines="2"
+              android:hint="Pick-up Address (optional)" />
+      </android.support.design.widget.TextInputLayout>
+
+      <Button
+          android:id="@+id/btnSubmit"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:layout_marginBottom="100dp"
+          android:layout_marginStart="2dp"
+          android:layout_marginEnd="2dp"
+          android:layout_marginTop="20dp"
+          android:layout_below="@id/address_layout"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:background="@drawable/button_round"
+          android:textColor="#FFFFFF"
+          android:text=" Submit " />
+
+      <Button
+          android:id="@+id/btnClose"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:layout_marginBottom="100dp"
+          android:layout_marginStart="4dp"
+          android:layout_marginEnd="4dp"
+          android:layout_marginTop="20dp"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:background="@drawable/button_round"
+          android:layout_below="@id/address_layout"
+          android:layout_toRightOf="@id/btnSubmit"
+          android:textColor="#FFFFFF"
+          android:text=" Cancel " />
+  </RelativeLayout>
+</ScrollView>

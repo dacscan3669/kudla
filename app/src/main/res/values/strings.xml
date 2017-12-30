@@ -1,0 +1,134 @@
+<resources>
+  <string name="app_name">Kudla</string>
+  <string name="one">Contacts</string>
+  <string name="two">Buy</string>
+  <string name="three">Sell</string>
+  <string name="thumbnail">thumbnail</string>
+  <string name="err_msg_title">Enter the Title</string>
+  <string name="err_msg_description">Enter the Description</string>
+  <string name="err_msg_price">Enter the Price</string>
+  <string name="err_msg_year">Enter the Year of purchase</string>
+  <string name="err_msg_kms">Enter the Kilometers run</string>
+  <string name="err_msg_mileage">Enter the Mileage (kms per litre)</string>
+  <string name="err_msg_Colour">Enter the Colour</string>
+  <string name="err_msg_name">Enter the Name</string>
+  <string name="err_msg_phone">Enter the Phone</string>
+  <string name="err_msg_email">Enter a valid Email ID</string>
+  <string name="err_msg_phone_email">Phone number or Email ID is required</string>
+  <string name="err_msg_address">Enter the Address</string>
+
+
+  <string-array name="category">
+    <item>Vehicles</item>
+    <item>Electronics and Computer</item>
+    <item>Baby and Children</item>
+    <item>Home Furnitures</item>
+    <item>Home Appliances</item>
+    <item>Sports and Fitness</item>
+    <item>Books, CDs and DVDs</item>
+  </string-array>
+
+  <string-array name="cars_vehicles">
+    <item>Cars</item>
+    <item>Bikes</item>
+    <item>Cycles</item>
+    <item>Vans and Jeeps</item>
+    <item>Lorries and Trucks</item>
+    <item>Car Parts</item>
+    <item>Bike Parts</item>
+    <item>Others</item>
+  </string-array>
+
+  <string-array name="electronis_computer">
+    <item>Mobile Phones</item>
+    <item>Music Systems</item>
+    <item>Computer</item>
+    <item>Laptop</item>
+    <item>Printers and Scanners</item>
+    <item>Cameras</item>
+    <item>Computer Accessories</item>
+    <item>Phone Accessories</item>
+    <item>Others</item>
+  </string-array>
+
+  <string-array name="baby_children">
+    <item>Cot</item>
+    <item>Pram</item>
+    <item>Children Clothing</item>
+    <item>Kids Toys</item>
+    <item>Baby Gifts</item>
+    <item>Other Kids items</item>
+  </string-array>
+
+  <string-array name="home_furniture">
+    <item>Sofa</item>
+    <item>Dining Table and Chair</item>
+    <item>Cots and Beds</item>
+    <item>TV Unit</item>
+    <item>Coffee Table</item>
+    <item>Dressing table and Mirros</item>
+    <item>Wall Unit</item>
+    <item>Wall Paintings</item>
+    <item>Study Table/Chair</item>
+    <item>Home lightings</item>
+    <item>Wardrobes</item>
+    <item>Others</item>
+  </string-array>
+
+  <string-array name="home_applicance">
+    <item>TV</item>
+    <item>Refrigertaor</item>
+    <item>Washing Machine/Dryers</item>
+    <item>Water Purifier</item>
+    <item>Air Conditioner</item>
+    <item>Air Cooler</item>
+    <item>Fan</item>
+    <item>Sewing Machine</item>
+    <item>Microwave Oven</item>
+    <item>Vaccum cleaner</item>
+    <item>Others</item>
+  </string-array>
+
+  <string-array name="sports_fitness">
+    <item>Gym Equipments</item>
+    <item>Others</item>
+  </string-array>
+
+  <string-array name="cds_dvds">
+    <item>Books</item>
+    <item>Software CDs</item>
+    <item>Games CDs</item>
+    <item>Movie CDs</item>
+    <item>Others</item>
+  </string-array>
+
+  <string-array name="contactType">
+    <item>-- Select Business Type -- </item>
+    <item>Doctor</item>
+    <item>Dentist</item>
+    <item>Restaurant</item>
+    <item>Car Rental</item>
+    <item>Electrician</item>
+    <item>Car Service and Repair</item>
+    <item>Bike Service and Repair</item>
+    <item>Tyre Service and Repair</item>
+    <item>Recreation/Tourist Spots</item>
+    <item>Lodging</item>
+    <item>Resort</item>
+    <item>Tailor</item>
+    <item>Florist</item>
+    <item>Beauty Salon</item>
+    <item>Hospital</item>
+    <item>Pharmacy</item>
+    <item>ATM</item>
+    <item>Travel Agent</item>
+    <item>School</item>
+    <item>College</item>
+  </string-array>
+
+  <string-array name="reportType">
+    <item>Report an Issue</item>
+    <item>Send Feedback</item>
+  </string-array>
+
+</resources>
